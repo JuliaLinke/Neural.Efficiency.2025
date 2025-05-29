@@ -19,7 +19,7 @@ rootdir = os.path.join('/','MyWorkingDirectory')
 hastask = True
 hasrest = True
 cohort = 'Cohort1'                #Cohort1 or Cohort2
-time = 'T1'			  #T1 or T2
+time = '1'			  #1 or 2
 microtime = .001
 
 def convolveHRF(regressors, Nvols, TR, demean=False): #========================
@@ -137,7 +137,7 @@ def writeDesignMatrix(design, savedir, subj, ses, run):#=======================
 
 # ======== [ Main ] ===========================================================
 
-listSubjects = open(os.path.join(rootdir,'lists/{}.{}.txt'.format(cohort,time)),'r')
+listSubjects = open(os.path.join(rootdir,'lists/{}.T{}.txt'.format(cohort,time)),'r')
 listSubjects = listSubjects.read().split()
 listSubjects.sort()
 fmriprepdir  = os.path.join(rootdir,'derivatives/{}/fmriprep/'.format(cohort))
