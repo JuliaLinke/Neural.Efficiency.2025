@@ -61,3 +61,4 @@ MyWorkingDirectory
 ```
 
 #### a01.MRIQC
+This script automates the quality assessment of structural and functional MRI data using MRIQC. It is designed to run on a high-performance computing (HPC) cluster using the Swarm job scheduler (SLURM-compatible). The script iterates over a list of participant IDs for a given cohort and timepoint. First, it checks whether [MRIQC](https://mriqc.readthedocs.io/en/stable/) outputs already exist. For each participant, it the (a) creates a temporary workspace on local scratch, (b) runs MRIQC with participant-specific settings, (c) copies the output to a shared derivatives folder,and (d) cleans up temporary files. Finally, the script compiles all commands into a Swarm file and submits the job for parallel execution. This setup allows for efficient parallel processing of many participants.
