@@ -3,7 +3,7 @@ Analysis files and meta-data to accompany the manuscript "Reduced Threat-Related
 
 This repository contains analysis scripts (bash, Python, Matlab, R) used for preprocessing and analysis of the data found in our OpenNeuro dataset (link will be included, once dataset has been uploaded completely). Although the code used to deface the scans is not included in this repository, we de-identified these images using using the [DSST Defacing Pipeline](https://github.com/nimh-dsst/dsst-defacing-pipeline).
 
-#### Directory Structure for DTI Preprocessing
+#### Directory Structure for Data Preprocessing
 
 The scripts assume the following directory structure:
 
@@ -54,7 +54,10 @@ MyWorkingDirectory
 │   │       └──  sub-[participant-id]
 │   ├── ComBat
 ├── lists
+├── slurm
 ├── stats
 │   ├── Palm
 │   ├── Figures
 ```
+
+#### a01.MRIQC
