@@ -71,3 +71,6 @@ This script helps organize participant-level outputs from [MRIQC](https://mriqc.
 
 #### a03.FMRIPREP
 This script automates participant-level preprocessing of BIDS-formatted MRI data using [fMRIPrep](https://fmriprep.org/en/stable/) on a high-performance computing (HPC) cluster with the Swarm job scheduler.
+
+#### a04.SelectNuissance
+This script prepares first-level regressors and nuisance confound matrices for resting-state and task-based fMRI data. 
