@@ -75,9 +75,13 @@ This script automates participant-level preprocessing of BIDS-formatted MRI data
 #### a04.SelectNuissance
 This is a Python script. Therefore you need to first need to run two lines to activate the environment you made with a00.MakeCondaEnv:
 >> source /MyWorkingDirectory/code/conda/etc/profile.d/conda.sh
+
 >> conda activate /MyWorkingDirectory/code/conda/envs/Efficiency
+
 Next you open Spyder
+
 >> spyder
+
 From here you run this script, which prepares first-level regressors and nuisance confound matrices for resting-state and task-based fMRI data.
 
 #### a05.Netmats
