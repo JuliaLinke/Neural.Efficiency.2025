@@ -30,5 +30,31 @@ MyWorkingDirectory
 │               └── func
 ├── code
 ├── derivatives
+│   ├── Cohort1
+│   │   └──  Efficiency
+│   │   └──  Fmriprep
+│   │       └──  sub-[participant-id]
+│   │   └──  MRIQC
+│   │   └──  RegressNuissance
+│   │       └──  sub-[participant-id]
+│   │   └──  Ses-1_Netmats
+│   │       └──  sub-[participant-id]
+│   │   └──  Ses-2_Netmats
+│   │       └──  sub-[participant-id]
+│   ├── Cohort2
+│   │   └──  Efficiency
+│   │   └──  Fmriprep
+│   │       └──  sub-[participant-id]
+│   │   └──  MRIQC
+│   │   └──  RegressNuissance
+│   │       └──  sub-[participant-id]
+│   │   └──  Ses-1_Netmats
+│   │       └──  sub-[participant-id]
+│   │   └──  Ses-2_Netmats
+│   │       └──  sub-[participant-id]
+│   ├── ComBat
 ├── lists
+├── stats
+│   ├── Palm
+│   ├── Figures
 ```
