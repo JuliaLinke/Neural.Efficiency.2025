@@ -89,3 +89,6 @@ This Python script, which you also run via spyder, extracts surface and subcorti
 
 #### a06.PrepCovBat
 This MATLAB script extracts and formats subject-level functional connectivity matrices (rest and task) for harmonization using methods like [CovBat](https://github.com/andy1764/CovBat_Harmonization).
+
+#### a07.CovBat
+This R script harmonizes functional connectivity matrices derived from resting-state and task-based fMRI across cohorts using the CovBat method. It removes unwanted site/scanner effects while preserving biologically meaningful variability.
