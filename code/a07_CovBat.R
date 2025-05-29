@@ -23,8 +23,7 @@ if (!require("CovBat")) {
 #########################################################
 if(file.exists("/MyWorkingDirectory/derivatives/")){
 datadir <-"/MyWorkingDirectory/derivatives"
-datadir1 <-"/MyWorkingDirectory/derivatives/Cohort1/Efficiency"
-datadir2 <-"/MyWorkingDirectory/derivatives/Cohort2/Efficiency"
+datadir1 <-"/MyWorkingDirectory/derivatives/CovBat"
 }
 
 #########################################################
@@ -33,25 +32,24 @@ datadir2 <-"/MyWorkingDirectory/derivatives/Cohort2/Efficiency"
 setwd(datadir)
 data<-read.csv("Phenotype.csv")
 
-### Read in connectivity based on full correlations
-setwd(datadir1)
-data11_full<-read.csv("Input_Covbat_TAU1_Ses1_full.csv",header = FALSE)
-data12_full<-read.csv("Input_Covbat_TAU1_Ses2_full.csv",header = FALSE)
 
-setwd(datadir2)
-data21_full<-read.csv("Input_Covbat_TAU2_Ses1_full.csv",header = FALSE)
-data22_full<-read.csv("Input_Covbat_TAU2_Ses2_full.csv",header = FALSE)
+setwd(datadir1)
+# Read in connectivity based on full correlations
+data11_full<-read.csv("Input_Covbat_Cohort1_Ses1_full.csv",header = FALSE)
+data12_full<-read.csv("Input_Covbat_Cohort1_Ses2_full.csv",header = FALSE)
+
+data21_full<-read.csv("Input_Covbat_Cohort2_Ses1_full.csv",header = FALSE)
+data22_full<-read.csv("Input_Covbat_Cohort2_Ses2_full.csv",header = FALSE)
 
 data_full<-cbind(data11_full,data12_full,data21_full,data22_full)
 rm(data11_full,data12_full,data21_full,data22_full)
 
-### Read in connectivity based on partial correlations
-setwd(datadir1)
-data11_partial<-read.csv("Input_Combat_TAU1_Ses1_partial.csv",header = FALSE)
-data12_partial<-read.csv("Input_Combat_TAU1_Ses2_partial.csv",header = FALSE)
+# Read in connectivity based on partial correlations
+data11_partial<-read.csv("Input_Combat_Cohort1_Ses1_partial.csv",header = FALSE)
+data12_partial<-read.csv("Input_Combat_Cohort1_Ses2_partial.csv",header = FALSE)
 
-data21_partial<-read.csv("Input_Combat_TAU2_Ses1_partial.csv",header = FALSE)
-data22_partial<-read.csv("Input_Combat_TAU2_Ses2_partial.csv",header = FALSE)
+data21_partial<-read.csv("Input_Combat_Cohort2_Ses1_partial.csv",header = FALSE)
+data22_partial<-read.csv("Input_Combat_Cohort2_Ses2_partial.csv",header = FALSE)
 
 data_partial<-cbind(data11_partial,data12_partial,data21_partial,data22_partial)
 rm(data11_partial,data12_partial,data21_partial,data22_partial)

@@ -13,10 +13,10 @@ Timepoint = '2';
 Type = 'full';
 nR = 116;
 
-%Create the directories and participant list
+%Set the directories and participant list
 data_dir = (strcat('/MyWorkingDirectory/derivatives/Cohort',Cohort,'/Ses',Timepoint,'_Netmats/'));
 list_dir = '/MyWorkingDirectory/lists/';
-outdir = (strcat('/MyWorkingDirectory/derivatives/Cohort',Cohort,'/Efficiency/'));
+outdir = (strcat('/MyWorkingDirectory/derivatives/CovBat/'));
 
 if ~isfolder(outdir)
     mkdir(outdir); 
@@ -55,4 +55,4 @@ for s = 1:length(ID)
 end
 
 cd (outdir)
-writematrix(Results,(strcat('Input_Combat_Cohort',Cohort,'_Ses',Timepoint,'_',Type,'.csv')))
+writematrix(Results,(strcat('Input_Covbat_Cohort',Cohort,'_Ses',Timepoint,'_',Type,'.csv')))
