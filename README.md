@@ -88,3 +88,4 @@ From here you run this script, which prepares first-level regressors and nuisanc
 This Python script, which you also run via spyder, extracts surface and subcortical time series from fMRI data, regresses out nuisance signals, and computes full or partial correlation matrices (netmats) across brain regions.
 
 #### a06.PrepCovBat
+This MATLAB script extracts and formats subject-level functional connectivity matrices (rest and task) for harmonization using methods like [CovBat](https://github.com/andy1764/CovBat_Harmonization).
