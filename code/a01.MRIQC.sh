@@ -14,7 +14,7 @@ echo -n "" > ${SWARMFILE}
 
 # ==== LOOP OVER PARTICIPANTS ====
 for s in $(cat ${ROOTDIR}/lists/${Cohort}.${Timepoint}.txt); do
-   if [[ ! -d ${ROOTDIR}/derivatives//${Cohort}/MRIQC/${s} ]]; then
+   if [[ ! -d ${ROOTDIR}/derivatives/${Cohort}/MRIQC/${s} ]]; then
       echo "let \"rnd = \${RANDOM} % 300\"; sleep \${rnd}; \
             export TMPDIR=/lscratch/\${SLURM_JOBID}; \
             mkdir -p \${TMPDIR}/${s}.out \${TMPDIR}/${s}.wrk; \
