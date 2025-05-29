@@ -52,7 +52,7 @@ MyWorkingDirectory
 │   │       └──  sub-[participant-id]
 │   │   └──  Ses-2_Netmats
 │   │       └──  sub-[participant-id]
-│   ├── ComBat
+│   ├── CovBat
 ├── lists
 ├── slurm
 ├── stats
@@ -92,3 +92,6 @@ This MATLAB script extracts and formats subject-level functional connectivity ma
 
 #### a07.CovBat
 This R script harmonizes functional connectivity matrices derived from resting-state and task-based fMRI across cohorts using the CovBat method. It removes unwanted site/scanner effects while preserving biologically meaningful variability.
+
+#### a08.NeuralEfficiency
+This MATLAB script estimates neural efficiency by computing the correlation between functional connectivity matrices derived from resting-state and task-based fMRI (dot-probe task). It also computes contribution scores for each connection.
