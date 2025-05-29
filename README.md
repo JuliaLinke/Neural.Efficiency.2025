@@ -73,4 +73,13 @@ This script helps organize participant-level outputs from [MRIQC](https://mriqc.
 This script automates participant-level preprocessing of BIDS-formatted MRI data using [fMRIPrep](https://fmriprep.org/en/stable/) on a high-performance computing (HPC) cluster with the Swarm job scheduler.
 
 #### a04.SelectNuissance
-This script prepares first-level regressors and nuisance confound matrices for resting-state and task-based fMRI data. 
+This is a Python script. Therefore you need to first need to run two lines to activate the environment you made with a00.MakeCondaEnv:
+>> source /MyWorkingDirectory/code/conda/etc/profile.d/conda.sh
+>> conda activate /MyWorkingDirectory/code/conda/envs/Efficiency
+Next you open Spyder
+>> spyder
+From here you run this script, which prepares first-level regressors and nuisance confound matrices for resting-state and task-based fMRI data.
+
+#### a05.Netmats
+
+#### a06.PrepCovBat
