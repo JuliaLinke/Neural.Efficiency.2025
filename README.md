@@ -65,3 +65,6 @@ This script automates the quality assessment of structural and functional MRI da
 
 #### a02.MRIQC.Group
 This script helps organize participant-level outputs from [MRIQC](https://mriqc.readthedocs.io/en/stable/) and runs a group-level summary analysis. It is intended to be used after all individual MRIQC runs are complete 
+
+#### a03.FMRIPREP
+This script automates participant-level preprocessing of BIDS-formatted MRI data using [fMRIPrep](https://fmriprep.org/en/stable/) on a high-performance computing (HPC) cluster with the Swarm job scheduler.
