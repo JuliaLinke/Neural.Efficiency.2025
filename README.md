@@ -114,3 +114,5 @@ This script prepares input matrices and vectors for permutation-based inference 
 #### b05.PermutationTests
 This MATLAB script runs permutation tests using [PALM](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/PALM) to investigate how (a) single edges contribute to neural efficiency, and how (b) neural efficiency relates anxiety as a diagnostic category and symptom dimension, and drift diffusion model (DDM) parameters (i.e., drifte rate, bias).
 
+#### b06.Figures
+This R script visualizes results for the main manuscript and the supplementary materials.
