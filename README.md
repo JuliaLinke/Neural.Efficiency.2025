@@ -60,6 +60,8 @@ MyWorkingDirectory
 │   ├── Figures
 ```
 
+## WORKFLOW
+### Preprocessing
 #### a00.MakeCondaEnv
 This script installs a custom Python environment for the project using [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main). It sets up all required packages and tools for data processing and analysis.
 
@@ -96,5 +98,10 @@ This R script harmonizes functional connectivity matrices derived from resting-s
 #### a08.NeuralEfficiency
 This MATLAB script estimates neural efficiency by computing the correlation between functional connectivity matrices derived from resting-state and task-based fMRI (dot-probe task). It also computes contribution scores for each connection.
 
+### Analysis
 #### b01.PrepMotion
 This R script extracts and summarizes motion-related parameters (e.g., framewise displacement, DVARS, translation and rotation along X/Y/Z axes) from [fMRIPrep](https://fmriprep.org/en/stable/) confounds files across different task conditions (resting-state, dot-probe task runs 1 and 2).
+
+#### b02.AnalyseMotion
+This R script investigates the relationship between head motion during fMRI and parent-reported anxiety symptoms in youth.
+
