@@ -116,3 +116,13 @@ This MATLAB script runs permutation tests using [PALM](https://fsl.fmrib.ox.ac.u
 
 #### b06.Figures
 This R script visualizes results for the main manuscript and the supplementary materials.
+
+#### b07.CBT
+This R script analyzes the relationship between neural efficiency and exposure-based cognitive behavioral therapy (EX-CBT). 
+
+#### Circle plots
+The circle plots illustrating edges that significantly contribute to neural efficiency or its relationship with other variables were created using [NeuroMarvl](https://immersive.erc.monash.edu/neuromarvl/). You will need the files in "CirclePlots" to recreate them.
+
+## CITATION AND USE
+If you use this code or build upon it in your own work, please cite the corresponding paper or contact me directly. This helps ensure appropriate use and attribution.
+📩 Feel free to reach out via GitHub or email if you have questions or plan to use the scripts in your own project.
