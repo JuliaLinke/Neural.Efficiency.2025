@@ -110,3 +110,7 @@ This R script assesses the **test–retest reliability** of neural efficiency ac
 
 #### b04.PrepPermutationTests
 This script prepares input matrices and vectors for permutation-based inference using [PALM](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/PALM), a toolbox for nonparametric statistics.
+
+#### b05.PermutationTests
+This MATLAB script runs permutation tests using [PALM](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/PALM) to investigate how (a) single edges contribute to neural efficiency, and how (b) neural efficiency relates anxiety as a diagnostic category and symptom dimension, and drift diffusion model (DDM) parameters (i.e., drifte rate, bias).
+
