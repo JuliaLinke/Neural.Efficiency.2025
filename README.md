@@ -105,3 +105,5 @@ This R script extracts and summarizes motion-related parameters (e.g., framewise
 #### b02.AnalyseMotion
 This R script investigates the relationship between head motion during fMRI and parent-reported anxiety symptoms in youth.
 
+#### b03.Reliability
+This R script assesses the **test–retest reliability** of neural efficiency across the two scanning sessions.
