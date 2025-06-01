@@ -107,3 +107,6 @@ This R script investigates the relationship between head motion during fMRI and 
 
 #### b03.Reliability
 This R script assesses the **test–retest reliability** of neural efficiency across the two scanning sessions.
+
+#### b04.PrepPermutationTests
+This script prepares input matrices and vectors for permutation-based inference using [PALM](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/PALM), a toolbox for nonparametric statistics.
