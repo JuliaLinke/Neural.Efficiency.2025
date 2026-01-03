@@ -203,12 +203,42 @@ if hastask == True:
                         Z.loc[2:2, 'non-steady_3'] = 1
                         Z['non-steady_4'] = 0
                         Z.loc[3:3, 'non-steady_4'] = 1
+
+						# Header of the image file is needed so we have the TR and number of volumes:
+                        image = nibabel.load(image_file) 
+
+                        # Organize events in FSL 3-column format, as a dictionary, one entry per event type.
+                        events     = pd.read_csv(event_file, delimiter=',')
+                        regressors = {}
                 
+                        # Regressors for events of interest
+                        EOI = events.trial_type.unique()
+                        for e in EOI:
+                            regressors[e] = events[events['trial_type'] == e]
+                            regressors[e].insert(len(regressors[e].columns), column='height', value=1)
+                    
+                        # Delete the column "trial_type" as it isn't part of the 3-col format
+                        for key in regressors:
+                            regressors[key].drop(['trial_type'], axis=1, inplace=True)
+                    
+                        # Convolve timing with the HRF
+						# Need to ignore the first 4 non-steady state images
+                        Nvols = max(0, image.header.get_data_shape()[3] - 4)
+                        TR     = image.header.get_zooms()[3]
+                        design = convolveHRF(regressors, Nvols, TR, demean=False)
+			
+						# create 4 rows of zeros with same number of columns as design (represent non-steady state)
+						zeros = pd.DataFrame(0, index=range(4), columns=design.columns)
+			
+						# add these rows at the beginning
+						design = pd.concat([zeros, design], axis=0).reset_index(drop=True)
+						#Combine timecourse with nuissance
+                        design = pd.concat((design, Z), axis=1)
                 
                         # Save variables that need to be regressed out in netmats script
                         if not os.path.exists(os.path.join(confounddir, subj)):
                             os.makedirs(os.path.join(confounddir, subj))
-                        np.savetxt(os.path.join(confounddir, subj,'{}{}_task-{}{}_confounds.csv'.format(subj, ses if not ses else '_{}'.format(ses), TASK, run if not run else '_{}'.format(run))), Z, delimiter=",")
+                        np.savetxt(os.path.join(confounddir, subj,'{}{}_task-{}{}_confounds.csv'.format(subj, ses if not ses else '_{}'.format(ses), TASK, run if not run else '_{}'.format(run))), design, delimiter=",")
         
                 else:
                     print("Missing event or image file:")
